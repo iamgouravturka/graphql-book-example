@@ -26,6 +26,7 @@ const Author = require("../models/author");
 //   { name: "author3", age: 80, id: "3" }
 // ];
 
+//----------------------Book Model--------------------
 const BookType = new GraphQLObjectType({
   name: "Book",
   fields: () => ({
@@ -43,6 +44,7 @@ const BookType = new GraphQLObjectType({
   })
 });
 
+//------------------------Author Model-----------------
 const AuthorType = new GraphQLObjectType({
   name: "Author",
   fields: () => ({
@@ -103,6 +105,7 @@ const RootQuery = new GraphQLObjectType({
   }
 });
 
+//-------------------Mutation Add user----------------
 const Mutation = new GraphQLObjectType({
   name: "Mutation",
   fields: {
@@ -139,6 +142,7 @@ const Mutation = new GraphQLObjectType({
   }
 });
 
+//-----------------------Exports----------------------
 module.exports = new GraphQLSchema({
   query: RootQuery,
   mutation: Mutation
